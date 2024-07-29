@@ -14,6 +14,12 @@ const PORT = 3000;
 app.use(express.static("public"));
 app.use(express.json());
 
+app.get('/api/recipes', getRecipes);
+app.get('api/recipes/:id', getRecipeByID)
+app.post('api/recipes', createRecipe)
+app.patch('/api/recipes', updateRecipeByID)
+app.delete('/api/recipes', deleteRecipeByID)
+
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });

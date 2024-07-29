@@ -6,6 +6,16 @@ const fileName = "recipes.json";
 // GET ALL RECIPES
 export async function getRecipes() {}
 
+
+// app.get("/api/recipes", (req, res) => {
+//   res.status(200).json({
+//     success: true,
+//     payload: xx,
+//   });
+// });
+
+
+
 // GET A RECIPE BY ID
 export async function getRecipeByID(id) {}
 
