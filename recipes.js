@@ -22,12 +22,13 @@ export async function getRecipes(req, res) {
     }
 }
 
-
-
-
-
 // GET A RECIPE BY ID
-export async function getRecipeByID(id) {}
+export async function getRecipeByID(id) {
+    const recipesData = await fs.readFile('recipes.json');
+    const recipes = JSON.parse(recipesData);
+    return recipes.find(recipes => recipes.id === id);
+}
+
 
 // CREATE A RECIPE
 export async function createRecipe(newRecipe) {}
